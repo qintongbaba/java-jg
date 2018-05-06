@@ -20,7 +20,7 @@ public class ThreadPool {
 	}
 
 	private ThreadPool(int corePoolSize, int maximumPoolSize, BlockingQueue<Runnable> workQueue) {
-		executor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, 600L, TimeUnit.SECONDS, workQueue);
+		executor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, 0L, TimeUnit.SECONDS, workQueue);
 	}
 
 	public void execute(Runnable runnable) {
